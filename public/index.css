@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Audiowide", Serif;
+}
+
+body {
+  background-color: #000000;
+}
+
+img {
+  padding: 20px;
+}
+
+h4 {
+  color: #000000;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0 3px 2px -2px gray;
+}
+
+.aside_skills {
+  background-color: #ebbe35;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.aside_information {
+  background-color: #43b047;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.aside_Programming_Language {
+  background-color: #e52521;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 75%;
+}
+
+.image:hover {
+  opacity: 0.5;
+}
+
+.rectangleofproject {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.rectangleofprojectout {
+  border-radius: 20px;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  padding: auto;
+}
+
+.rectangleofskill {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: rgb(38, 35, 74);
+}
+
+.rectangleofskillout {
+  border-radius: 20px;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  padding: auto;
+}
+
+.rectangleofskill:hover {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fbd000;
+}
+
+.tbcenter {
+  margin: auto;
+  padding: auto;
+}
+
+#pskill {
+  text-align: center;
+  font-size: 15px;
+  color: aliceblue;
+}
+
+#pskilltitle {
+  text-align: center;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+/*Animation*/
+/* DEMO-SPECIFIC STYLES */
+.typewriter_head h1 {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.3em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  background: url(src/img/mario-walking.gif) 0 0 no-repeat;
+  background-size: 50px;
+  animation: typing 1s steps(50, end), blink-caret 0.5s step-end infinite,
+    like-gif steps(28) 1s infinite both;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  100% {
+    border-color: orange;
+  }
+}
+
+@keyframes like-gif {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.rotate {
+  position: relative;
+  animation-name: rotate_icon;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate_icon {
+  0%   {left:0px; top:0px;}
+  25%  {left:10px; top:10px;}
+  50%  {left:10px; top:10px;}
+  75%  {left:10px; top:10px;}
+  100% {left:0px; top:0px;}
+}
+
+.rectangleofskill {
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  animation-name: change_color;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes change_color {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: red;}
+}
+
+/*responsive*/
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
